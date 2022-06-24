@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+      }
+
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+          display: block;
+      }
+
+      body {
+          line-height: 1;
+      }
+
+      ol, ul {
+          list-style: none;
+      }
+
+      blockquote, q {
+          quotes: none;
+      }
+
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+          content: '';
+          content: none;
+      }
+
+      table {
+          border-collapse: collapse;
+          border-spacing: 0;
+      }
+
+      /* 본문 */
+      .content_page {
+          width: 850px;
+          margin: 20px auto;
+          overflow: hidden;
+      }
+
+      .card {
+          float: left;
+          width: 260px;
+          margin: 0 10px 10px;
+      }
+
+      .card:first-of-type {
+          margin: 0 0 10px;
+      }
+
+      #post-box {
+          display: none;
+          width: 100px;
+      }
+
+  </style>
+  <script>
+      function openClose() {
+          let boxButton = $('#boxPost');
+          let box = $('#post-box');
+          let status = $('#post-box').css('display');
+          if (status === 'none') {
+              box.show();
+              boxButton.text('닫기');
+
+          } else {
+              box.hide();
+              boxButton.text('열기');
+          }
+
+      }
+  </script>
+</head>
+<body>
+<div class="content_page">
+
+  <div class="jumbotron">
+    <h1 class="display-4">나홀로 링크 메모장!</h1>
+    <p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다</p>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button" onclick="openClose()" id="boxPost">열기</a>
+    </p>
+  </div>
+  <div id="post-box">
+    djdjdjdj
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
+    <div class="card-body">
+      <a href="/" class="card-title">Title</a>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <strong>comment</strong>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
