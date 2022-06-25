@@ -102,12 +102,29 @@
       .txt_sub {
           margin-top: 10px;
       }
+      .txt_money{
+          color: blue;
+      }
 
   </style>
   <script>
+      /* 1주차 */
       function order() {
           alert('주문완료!');
       }
+
+      /* 2주차 */
+      $.ajax({
+          type: "GET",
+          url: "http://spartacodingclub.shop/sparta_api/rate",
+          data: {},
+          success: function (response) {
+              let money = response.rate;
+
+              $('.num_money').append(money);
+          }
+      })
+
   </script>
 </head>
 
@@ -120,6 +137,7 @@
       <span class="txt_pro">가격:3,000원/개</span>
     </div>
     <p class="txt_sub">이 양초에는 사실 특별한 힘이 있어요.</p>
+    <p class="txt_money">달러-원 환율 <span class="num_money"></span></p>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
