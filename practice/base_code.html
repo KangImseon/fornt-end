@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
   <script>
-      /* ajax base code */
+    /* ready 함수로 쓰이는 code */
+    $(function () {
+          // 실행할 기능을 정의해주세요.
+      });
 
-      function baseAjax() {
-          console.log('aaa');
-          $.ajax({
-              type: "GET",
-              url: "http://spartacodingclub.shop/sparta_api/seoulbike",
-              data: {},
-              success: function (response) {
-                  console.log(response);
-              }
-          })
-      }
+    /* ajax base code */
+
+    $(document).ready(function () {
+    });
+
+    function baseAjax() {
+      $.ajax({
+        type: "GET",
+        url: "http://spartacodingclub.shop/post",
+        data: {},
+        success: function (response) {
+          console.log(response)
+        }
+      })
+    }
 
   </script>
 </head>
+
 <body>
-<button type="button" onclick="baseAjax()">
-  ajax base code
-</button>
+  <button type="button" onclick="baseAjax()">
+    ajax base code
+  </button>
 </body>
+
 </html>

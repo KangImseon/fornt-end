@@ -84,13 +84,32 @@
   <script>
       $(function () {
           // 실행할 기능을 정의해주세요.
+          $('.card').empty;
       });
       $.ajax({
           url: "http://spartacodingclub.shop/post", // 클라이언트가 HTTP 요청을 보낼 서버의 URL 주소
           data: {},  // HTTP 요청과 함께 서버로 보낼 데이터
           method: "GET",   // HTTP 요청 메소드(GET, POST 등)
           success:function (response) {
-              
+
+              let articles = response.articles;
+              for(let tmp = 0; tmp < articles.length; tmp++){
+                let comment = articles[tmp].comment;
+                let desc = articles[tmp].desc;
+                let image = articles[tmp].image;
+                let title = articles[tmp].title;
+                let url = articles[tmp].url;
+               let tempHtml =  `<div class="card">
+                             <img class="card-img-top" src="`+image+`" alt="Card image cap">
+                             <div class="card-body">
+                               <a href="`+url+`" target="_blank" class="card-title">`+title +`</a>
+                               <p class="card-text">`+desc+`</p>
+                               <p class="card-text comment">`+comment+`</p>
+                             </div>
+                           </div>`;
+
+                $('#card-box').append(tempHtml);
+              }
           }
       });
 
@@ -124,61 +143,9 @@
   <div id="post-box">
     djdjdjdjss
   </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff" alt="Card image cap">
-    <div class="card-body">
-      <a href="/" class="card-title">Title</a>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <strong>comment</strong>
-    </div>
-  </div>
+  <div id="card-box">
 
+  </div>
 </div>
 
 </body>
